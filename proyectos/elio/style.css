@@ -1,0 +1,160 @@
+/* Estilo para el enlace que simula un botón */
+.volver-btn {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #f1f1f1; /* Fondo claro para que resalte sobre el fondo oscuro */
+    color: #333; 
+    text-align: center;
+    text-decoration: none; /* Quitamos el subrayado del enlace */
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease; /* Efecto de transición para el hover */
+}
+
+/* Efecto hover para cuando el usuario pasa el mouse sobre el enlace */
+.volver-btn:hover {
+    background-color: #e0e0e0; 
+    color: #000; /* Cambio de color de texto a negro al hacer hover */
+}
+
+body {
+    margin: 0;
+    height: 300vh;
+    background-image: url('elio_background_image.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 150px;
+}
+
+.personatge_Elio {
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: none;
+    animation-play-state: paused; /* Pausar la animación inicialmente */
+}
+
+/* Al pasar el ratón sobre la imagen de Elio, se inicia la animación */
+.personatge_Elio:hover {
+    animation: personatge_Elio 4s ease-in-out infinite alternate; /* Animación con movimientos alternados */
+}
+
+.estrelles_animades {
+    animation: estrelles_animades 4s infinite; /* Animación infinita */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-timing-function: linear; /* Movimiento continuo y suave */
+}
+
+/* Keyframes para la animación del personaje Elio */
+@keyframes personatge_Elio {
+    0% {
+        transform: translate(0, 0) scaleX(1); /* Inicialmente en posición original */
+    }
+
+    50% {
+        transform: translate(-50vw, 50vh) scaleX(1); /* Mueve el personaje hacia la izquierda */
+    }
+
+    51% {
+        transform: translate(-50vw, 50vh) scaleX(-1); /* Cambia la dirección de la imagen */
+    }
+
+    100% {
+        transform: translate(-100vw, 100vh) scaleX(-1); /* Mueve el personaje fuera de la pantalla */
+    }
+}
+
+@keyframes estrelles_animades {
+    0% {
+        transform: translate(-50%, -50%) translate(0, 0); /* Comienza en el centro */
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translate(300px, -200px); /* Mueve las estrellas hacia la derecha */
+    }
+}
+
+.marquee-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #3ebee1;
+    overflow: hidden; /* Oculta el contenido que se sale del contenedor */
+    white-space: nowrap; /* Hace que el texto no se divida */
+    z-index: 1000; /* Asegura que el texto siempre esté por encima de otros elementos */
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%; /* Empuja el texto fuera de la pantalla para iniciar el movimiento */
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+    animation: scroll-left 20s linear infinite; /* Animación de desplazamiento hacia la izquierda */
+}
+
+/* Keyframes para la animación de desplazamiento de texto (marquee) */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%); /* Desplaza el texto fuera de la pantalla */
+    }
+}
+
+/* Estilos adaptativos para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 60px; 
+        margin-top: 30px;
+    }
+
+    .personatge_Elio {
+        width: 150px; 
+        top: 10px;
+        right: 10px;
+    }
+
+    .estrelles_animades {
+        width: 150px; 
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .marquee-content {
+        font-size: 18px; 
+    }
+}
+
+/* Estilos adaptativos para pantallas medianas */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 100px;
+        margin-top: 50px;
+    }
+
+    .personatge_Elio {
+        width: 200px; 
+    }
+
+    .estrelles_animades {
+        width: 200px;
+    }
+}

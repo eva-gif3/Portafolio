@@ -1,0 +1,175 @@
+.volver-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(134, 214, 134);
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Quitamos el subrayado del enlace */
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Efecto de transición para el hover */
+}
+
+/* Efecto hover para cuando el usuario pasa el mouse sobre el enlace */
+.volver-btn:hover {
+    background-color: rgb(120, 179, 120); /* Cambio de color al pasar el mouse */
+}
+
+body{
+    background-color: rgb(238, 225, 199);
+}
+
+
+h1{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xxx-large;
+    text-align: center;
+    
+}
+
+.container{
+    display: flex;
+    gap: 40px;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 100%;
+}
+.escritorio{
+    width: 360px;
+    height: 340px;
+    background-color: rgb(217, 230, 193);
+    border-radius: 10px;
+    padding: 5px;
+    padding-top: 8px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.631);
+}
+
+    
+
+.escritorio:hover{
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.415);
+    rotate: 20deg; 
+    scale: 115%;
+    transition: 3s;
+ 
+}
+
+.imatge{
+    width: 320px;
+    height: 240px;
+    background-color: rgb(186, 177, 164);
+    background-image: url(escritorio1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    border-radius: 2px;
+}
+
+h2{
+    text-align: center;
+}
+
+h2:hover{
+    box-shadow: 15px 15px 15px rgb(195, 228, 146);
+    background-color: rgb(221, 248, 216);
+    scale: 300%;
+    transition: 3s;
+ 
+}
+
+#escritorio2{
+    background-image: url(escritorio2.jpg);
+    background-size: cover;
+
+}
+
+#escritorio3 {
+    background-image: url(escritorio3.jpg);
+    background-size: cover;
+}
+
+#escritorio4 {
+    background-image: url(escritorio4.jpg);
+    background-size: cover;
+}
+#escritorio5 {
+    background-image: url(escritorio5.jpg);
+    background-size: cover;
+}
+#escritorio6 {
+    background-image: url(escritorio6.jpg);
+    background-size: cover;
+}
+.descript{
+    margin-top: -10px;
+    margin:auto;
+    width: 90%;
+    text-align: center;
+        color: rgb(61, 58, 58);
+    font-style: italic;
+    
+
+}
+/* Tablets (ancho máximo 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .escritorio {
+        width: 100%;
+        height: auto;
+    }
+
+    .imatge {
+        width: 100%;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .descript {
+        font-size: 0.9em;
+    }
+}
+
+/* Móviles (ancho máximo 480px) */
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .escritorio {
+        width: 100%;
+        height: auto;
+    }
+
+    .imatge {
+        width: 100%;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .descript {
+        font-size: 0.85em;
+    }
+}

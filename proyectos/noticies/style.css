@@ -1,0 +1,337 @@
+.volver-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #99434f;
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Elimina el subratllat de l'enllaç */
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Efecte suau quan el ratolí passa per sobre */
+}
+
+.volver-btn:hover {
+    background-color: #751925; /* Color més fosc al passar el mouse */
+}
+
+.title {
+  font-size: 250%;
+  font-style: oblique;
+  font-weight: bold;
+  color: orange;
+  text-shadow:
+    0 0 5px red,
+    0 0 10px orangered,
+    0 0 20px orange,
+    0 0 30px yellow;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #99434f;
+  color: white;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Sempre a sobre dels altres elements */
+}
+
+.logo1 {
+  width: 100px;
+  height: 100px;
+  margin-left: 60px;
+}
+
+header {
+  margin: 5px;
+  height: 180px;
+  text-align: center;
+  overflow: hidden;
+}
+
+main {
+  margin-top: 200px; /* Separació per evitar que el header fixe el tapi */
+  text-align: justify;
+}
+
+h2 {
+  font-weight: bold; 
+  font-size: xx-large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+h3 {
+  font-size: x-large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 1px;
+  margin-left: 20px;
+}
+
+img {
+  
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border: 2px solid #dd720d;
+  
+}
+
+.div1 {
+  display: flex;
+  text-align: center;
+  margin-top: -20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: space-around;
+}
+
+a {
+  color: rgb(213, 162, 22);
+  font-size: x-large;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  border-bottom: 2px solid #555;
+  padding-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.ad-container {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.ad-container img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+
+.footer2 {
+  background: #99434f;
+  font-weight: 300; 
+  text-align: center;
+  word-wrap: break-word; 
+}
+
+.personatge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  font-size: x-large;
+  margin-bottom: 40px;
+  }
+
+.textepersonatge p {
+  column-count: 3;
+  margin-top: 0;
+  
+}
+
+section {
+  background-color: rgb(236, 226, 226);
+}
+
+article {
+  background-color: rgb(245, 230, 212);
+}
+
+.monstres {
+  background-color: rgb(240, 238, 238);
+}
+
+#Contacte {
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 2px;
+}
+/* media queries per tauletes */
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 180%;
+    text-shadow: none;
+  }
+
+  .fixed {
+    padding: 10px;
+    font-size: medium;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo1 {
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+  }
+
+  header {
+    height: auto;
+  }
+
+  main {
+    margin-top: 150px;
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: x-large;
+  }
+
+  h3 {
+    font-size: large;
+    margin-left: 10px;
+  }
+
+  .div1 {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  a {
+    font-size: large;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .personatge {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .textepersonatge p {
+    column-count: 1;
+  }
+
+  .ad-container img {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+  }
+}
+/* media queries per mòbils petits */
+@media (max-width: 480px) {
+  
+  .title {
+    font-size: 150%;
+  }
+
+  .fixed {
+    font-size: small;
+    padding: 8px;
+  }
+
+  .logo1 {
+    width: 50px;
+    height: 50px;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  h3 {
+    font-size: medium;
+    margin-left: 5px;
+  }
+
+  .nav {
+    gap: 5px;
+  }
+
+  a {
+    font-size: medium;
+  }
+
+  .div1 {
+    margin-top: 20px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .personatge {
+    padding: 10px;
+  }
+
+  .textepersonatge p {
+    font-size: medium;
+    column-count: 1;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+
+  .footer-section h3 {
+    font-size: medium;
+  }
+
+  .footer-links a {
+    font-size: small;
+  }
+
+  .ad-container {
+    padding: 5px;
+  }
+}

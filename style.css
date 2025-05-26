@@ -150,14 +150,24 @@ h2 {
     text-align: center;
 }
 
+.proyectos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .proyecto {
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    width: 45%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .proyecto h3 {
@@ -226,6 +236,12 @@ footer {
     .proyecto {
         width: 100%;
         margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+  .proyecto {
+    width: 100%;
     }
 }
 

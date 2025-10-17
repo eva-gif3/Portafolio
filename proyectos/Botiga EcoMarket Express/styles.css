@@ -1,0 +1,297 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TIPOGRAFIA I FONS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  line-height: 1.6;
+}
+
+/* CAPÇALERA AMB FADE-IN */
+header {
+  background-color: #2e7d32;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: #c8e6c9;
+  margin-bottom: 10px;
+}
+
+/* NAVEGACIÓ */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #c8e6c9;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* HERO */
+.hero {
+  background-image: url('img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #388e3c;
+}
+
+/* SECCIÓ PRODUCTES */
+#productes {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 280px;
+  background-color: #f1f8e9; 
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px;
+  font-size: 1.2rem;
+  color: #2e7d32;
+}
+
+.card p {
+  margin: 0 15px 15px;
+  color: #4e4e4e;
+}
+
+input:focus, textarea:focus, button:focus, .card:focus {
+  outline: 3px solid #2a9d8f;
+  outline-offset: 2px;
+  box-shadow: 0 0 4px #2a9d8f;
+}
+
+.card img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover img
+.card:focus img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+.card {
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 3px solid #2a9d8f;
+  outline-offset: 2px;
+}
+
+/* Hover image effect for cistella card */
+.card.cistella {
+  position: relative;
+  overflow: hidden;
+}
+
+.card.cistella img {
+  transition: opacity 0.3s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Pseudo-element per a la imatge hover */
+.card.cistella::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('img/cistella-hover.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card.cistella:hover::after,
+.card.cistella:focus-within::after {
+  opacity: 1;
+}
+
+.card.cistella:hover img,
+.card.cistella:focus-within img {
+  opacity: 0;
+}
+
+/* SECCIÓ BENEFICIS */
+#beneficis {
+  background-color: #c8e6c9;
+  padding: 40px 20px;
+}
+
+/* FORMULARI DE CONTACTE */
+form {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #388e3c;
+}
+
+/* MISSATGES D’ERROR */
+#error-nom,
+#error-email,
+#error-telefon,
+#error-data,
+#error-missatge,
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Per a lectors de pantalla: estat del formulari ocult però accessible */
+.sr-status {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1b5e20;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+}

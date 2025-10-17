@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Web promocional EcoMarket Express" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+  <title>EcoMarket Express</title>
+</head>
+
+<body>
+  <!-- Capçalera -->
+  <header>
+    <h1>EcoMarket Express</h1>
+    <div class="nav-container">
+      <nav id="barraNav" aria-label="Navegació principal">
+        <ul>
+          <li><a href="#productes">Productes</a></li>
+          <li><a href="#beneficis">Beneficis</a></li>
+          <li><a href="#contacte">Contacte</a></li>
+        </ul>
+      </nav>
+      <img src="img/hero.jpg" alt="Logo de l'empresa EcoMarket Express" width="120" />
+    </div>
+
+    <!-- Hero -->
+    <section id="hero" class="hero" aria-describedby="hero-desc">
+      <div class="hero-content">
+        <h2>Compromís amb la Terra i els seus habitants. Som bio, som vocació!</h2>
+        <p id="hero-desc">Botigues 100% ecològiques que cooperen de manera harmònica.</p>
+        <button id="cta" class="btn">Veure botiga</button>
+      </div>
+    </section>
+  </header>
+
+  <!-- Contingut principal -->
+  <main>
+    <!-- Productes -->
+    <section id="productes" class="section" aria-label="Secció de productes">
+      <h2>Els nostres productes</h2>
+      <p>Selecciona productes en les principals categories:</p>
+      <div class="cards">
+        <article class="card cistella" tabindex="0">
+          <a href="https://www.latavella.cat/cistelles-ecologiques/">
+            <img src="img/cistella-ecològica.jpg" alt="Cistella ecològica" loading="lazy" />
+          </a>
+          <h3>Cistella ecològica de fruita i verdura</h3>
+          <p>Collida localment i sense pesticides.</p>
+        </article>
+        <article class="card" tabindex="0">
+          <a href="https://www.ametllerorigen.com/ca/lactics-i-ous">
+            <img src="img/lactis-i-ous.jpg" alt="Lactis i ous" loading="lazy" />
+          </a>
+          <h3>Lactis i ous</h3>
+          <p>Font d'energia sostenible.</p>
+        </article>
+        <article class="card" tabindex="0">
+          <a href="https://shop.veritas.es/categorias/frescos/proteina-vegetal/2013">
+            <img src="img/proteina-vegetal-ecologica.jpg" alt="Proteïna vegetal ecològica" loading="lazy" />
+          </a>
+          <h3>Proteïna vegetal ecològica</h3>
+          <p>De l'hort a la taula, 100% natural.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Beneficis -->
+    <section id="beneficis" class="section" aria-label="Secció de beneficis">
+      <h2>Per què escollir EcoMarket? Quins beneficis aporta?</h2>
+      <br>
+      <ul>
+        <li><strong>🌍 Sostenibilitat:</strong> Productes amb baix impacte ambiental.</li>
+        <li><strong>👨‍🌾 Proximitat:</strong> Suport als agricultors locals.</li>
+        <li><strong>💚 Salut:</strong> Sense químics ni additius artificials.</li>
+      </ul>
+    </section>
+    <br>
+    <!-- Formulari de contacte -->
+    <section id="contacte" class="section" aria-label="Formulari de contacte">
+      <h2>Contacta amb nosaltres</h2>
+      <form id="contact-form" novalidate aria-describedby="form-help">
+        <p id="form-help" class="help">Tots els camps són obligatoris.</p>
+
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" type="text" autocomplete="name" required pattern="^[A-Za-zÀ-ÿ'\-\s]+$"
+            aria-describedby="error-nom" aria-invalid="false" />
+          <small id="error-nom" class="error" role="alert" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Correu electrònic</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="error-email"
+            aria-invalid="false" />
+          <small id="error-email" class="error" role="alert" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="telefon">Telèfon</label>
+          <input id="telefon" name="telefon" type="tel" inputmode="numeric" pattern="^\d{9}$" required
+            aria-describedby="error-telefon" aria-invalid="false" />
+          <small id="error-telefon" class="error" role="alert" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="data">Data preferida de contacte</label>
+          <input id="data" name="data" type="date" required aria-describedby="error-data" aria-invalid="false" />
+          <small id="error-data" class="error" role="alert" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="missatge">Missatge</label>
+          <textarea id="missatge" name="missatge" minlength="20" required aria-describedby="error-missatge"
+            aria-invalid="false"></textarea>
+          <small id="error-missatge" class="error" role="alert" aria-live="polite"></small>
+        </div>
+
+        <button class="btn primari" type="submit">Envia</button>
+        <div id="form-status" class="sr-status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Peu de pàgina -->
+  <footer>
+    <p><strong>Horari:</strong> 8h - 18h</p>
+    <address>
+      <p><strong>Adreça:</strong> C/Montbau, 15, 08080 Barcelona</p>
+    </address>
+  </footer>
+</body>
+
+</html>

@@ -1,3 +1,16 @@
+.volver-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #green;
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Elimina el subratllat de l'enllaç */
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease; /* Efecte suau quan el ratolí passa per sobre */
+}
+
 /* RESET GENERAL */
 * {
   margin: 0;
@@ -294,4 +307,5 @@ footer {
     width: 100%;
     padding: 15px;
   }
+
 }

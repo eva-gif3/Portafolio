@@ -2,7 +2,7 @@
     display: inline-block;
     padding: 10px 20px;
     background-color: #white;
-    color: white;
+    color: green;
     text-align: center;
     text-decoration: none; /* Elimina el subratllat de l'enllaç */
     border-radius: 5px;
@@ -309,4 +309,5 @@ footer {
   }
 
 }
+
 

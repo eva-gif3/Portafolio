@@ -1,7 +1,7 @@
 .volver-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #green;
+    background-color: #white;
     color: white;
     text-align: center;
     text-decoration: none; /* Elimina el subratllat de l'enllaç */
@@ -309,3 +309,4 @@ footer {
   }
 
 }
+
